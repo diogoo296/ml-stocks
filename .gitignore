@@ -1,8 +1,5 @@
-bovespa-data/daily-stocks
-bovespa-data/ABEV3
-bovespa-data/PETR4
-bovespa-data/20080102-20170305_candles_ibov_15min_tratado_10campos_comCabecalho.csv
-bovespa-data/data
+bovespa-data
+results
 *.swp
 *.pyc
 *.ropeproject
