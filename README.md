@@ -29,10 +29,24 @@ At last, for every input *x* at the time *t*, *x(t)* was classified as **up** (o
 
 ## Hypotesis
 
-This study aims to evaluate the following hypotesis:
-
 | **H1:** A stock is affected by a set of forces **unique to it**. |
-|:----------------------------------------------------------------:|
+|:-----------------------------------------------------------------|
+
+In order to verify this hypotesis, the original datset was split into datasets composed by only one stock, wich were trained and tested separatelly. To limit the project scope, the following stocks were selected from the original dataset:
+
+| **Code** | **Company**                                  |
+|:--------:|:--------------------------------------------:|
+| BBCD4    | Banco Bradesco                               |
+| ABEV3    | Companhia de Bebidas das Américas (AmBev)    |
+| CMIG4    | Companhia Energética de Minas Gerais (CEMIG) |
+| VALE5    | VALE S.A.                                    |
+| BRFS3    |  Brasil Foods S.A.                           |
+| JBSS3    |  JBS S.A.                                    |
+| BRKM5    |  Braskem S.A.                                |
+| PETR4    |  Petróleo Brasileiro S.A. - Petrobras        |
+| BBAS3    |  Banco do Brasil S.A.                        |
+| NATU3    |  Natura Cosméticos S.A.                      |
+| CCRO3    |  Companhia de Concessões Rodoviárias         |
 
 | **H2:** Financial technical indicators highly correlated to a stock closing value **affect positively** in the machine learning classification **accuracy**. |
-|:----------------------------------------------------------------:|
+|:----------------------------------------------------------------|
