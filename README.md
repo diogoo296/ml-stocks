@@ -29,8 +29,8 @@ At last, for every input *x* at the time *t*, *x(t)* was classified as **up** (o
 
 ## Hypotesis
 
-| **H1:** A stock is affected by a set of forces **unique to it**. |
-|:-----------------------------------------------------------------|
+| H1: A stock is affected by a set of forces *unique to it*. |
+|:-----------------------------------------------------------|
 
 In order to verify this hypotesis, the original datset was split into datasets composed by only one stock, wich were trained and tested separatelly. To limit the project scope, the following stocks were selected from the original dataset:
 
@@ -48,5 +48,15 @@ In order to verify this hypotesis, the original datset was split into datasets c
 | NATU3    |  Natura Cosméticos S.A.                      |
 | CCRO3    |  Companhia de Concessões Rodoviárias         |
 
-| **H2:** Financial technical indicators highly correlated to a stock closing value **affect positively** in the machine learning classification **accuracy**. |
+---
+
+| H2: Financial technical indicators highly correlated to a stock closing value *affect positively* in the *classification accuracy*. |
 |:----------------------------------------------------------------|
+
+To test this hypotesis, the financial technical indicators of each stock dataset were calculated using the external library [TA-Lib (Technical Analysis Library)](http://www.ta-lib.org/). Then, each dataset was split into 3 new datasets, were the features were composed by:
+
+* **First dataset:** the technical indicators highly correlated to the stock closing value plus the original features;
+* **Second dataset:** the indicators lowly correlated plus the original features;
+* **Last dataset:** only by the original features.
+
+Note that the correlation was calculated using the [Pearson correlation coefficient (PCC)](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient), which was considered **high** when `PCC >= +-0.5` and **low** for the opposite.
