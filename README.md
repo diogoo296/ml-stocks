@@ -14,3 +14,25 @@ Considering that there are several forces that moves stocks prices such as compa
 The original dataset is composed by 60 stocks from [BM&F BOVESPA](https://en.wikipedia.org/wiki/BM%26F_Bovespa), the Brazilian oficial stock exchange and the 13th largest in the world (in 2011). The data was crawled in a 15 minutes interval between BOVESPA's opening and closing times from January 2008 to March 2017, where each stock is represented by around 70000 entries. The following image illustrates 4 stocks from this dataset:
 
 ![alt text](stocks_plot.png)
+
+Every row from the datased is described by the following features:
+
+| **Feature** | **Description**                          |
+|:-----------:|:----------------------------------------:|
+| **Open**    | Stock opening value at this day          |
+| **Close**   | Stock closing value at time *t*          |
+| **Mininum** | Stock minumum value until time *t*       |
+| **Maximum** | Stock maximum value until time *t*       |
+| **Volume**  | Transaction financial volume at time *t* |
+
+At last, for every input *x* at the time *t*, *x(t)* was classified as **up** (or **1**) if *x*'s closing value at *t + 1* was higher than at *t* and **down** (or **0**) if the opposite.
+
+## Hypotesis
+
+This study aims to evaluate the following hypotesis:
+
+| **H1:** A stock is affected by a set of forces **unique to it**. |
+|:----------------------------------------------------------------:|
+
+| **H2:** Financial technical indicators highly correlated to a stock closing value **affect positively** in the machine learning classification **accuracy**. |
+|:----------------------------------------------------------------:|
