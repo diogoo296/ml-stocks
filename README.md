@@ -1,6 +1,14 @@
 # Stock Market Prediction Based on Machine Learning Algorithms
 My final project in the paper Machine Learning (Universidade Federal de Minas Gerais).
 
+## Table of Contents
+
+* [Introduction](#introduction)
+* [Dataset](#dataset)
+* [Hypotesis](#hypotesis)
+* [Experiments and Results](#experiments-and-results)
+* [Future Work](#future-work)
+
 ## Introduction
 
 Stock market prediction is a challeging task since the stock marked is not based only in financial factors and rational decisions, but also in decisions based on emotions. Thus, there is a lot of uncertainty and noise in financial time series data which makes hard good predictions. However, considering that humans repeat behaviours, there is a great potential in aplying Machine Learning in this area.
