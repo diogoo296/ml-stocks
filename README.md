@@ -59,4 +59,22 @@ To test this hypotesis, the financial technical indicators of each stock dataset
 * **Second dataset:** the indicators lowly correlated plus the original features;
 * **Last dataset:** only by the original features.
 
-Note that the correlation was calculated using the [Pearson correlation coefficient (PCC)](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient), which was considered **high** when `PCC >= +-0.5` and **low** for the opposite.
+Note that the correlation was calculated using the [Pearson correlation coefficient (PCC)](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient), which was considered **high** when the coefficient was **higher or equal than +-0.5** AND **low when the opposite**.
+
+## Experiments and Results
+
+The following experiments used an implementation of SVM from the [Scikit Learn](http://scikit-learn.org/stable/), a Python Machine Learning framework. The parameters used to train it for all datasets were fixed to *C = 1*, *Radius Basis Function kernel* and the other [SVM default parameters](http://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html#sklearn.svm.SVC). The results are shown in the table below:
+
+| Code  | Avg Accuracy (%) | Variance |
+|:-----:|:----------------:|:--------:|
+| BBCD4 | 57.4             | 0.57     |
+| ABEV3 | 60.1             | 0.88     |
+| CMIG4 | 61.6             | 0.69     |
+| VALE5 | 55.6             | 0.13     |
+| BRFS3 | 54.2             | 0.32     |
+| JBSS3 | 59.3             | 0.45     |
+| BRKM5 | 56.9             | 0.43     |
+| PETR4 | 55.7             | 0.13     |
+| BBAS3 | 56.1             | 0.15     |
+| NATU3 | 54.0             | 0.09     |
+| CCRO3 | 59.3             | 0.68     |
