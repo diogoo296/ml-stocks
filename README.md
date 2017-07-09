@@ -63,18 +63,29 @@ Note that the correlation was calculated using the [Pearson correlation coeffici
 
 ## Experiments and Results
 
-The following experiments used an implementation of SVM from the [Scikit Learn](http://scikit-learn.org/stable/), a Python Machine Learning framework. The parameters used to train it for all datasets were fixed to *C = 1*, *Radius Basis Function kernel* and the other [SVM default parameters](http://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html#sklearn.svm.SVC). The results are shown in the table below:
+The following experiments used an implementation of SVM from the [Scikit Learn](http://scikit-learn.org/stable/), a Python Machine Learning framework. The parameters used to train the SVM for all datasets were fixed to *C = 1*, *Radius Basis Function kernel* and the others [SVM default parameters](http://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html#sklearn.svm.SVC). As it can be show by the table below, the accuracy is noticeably high for some stocks - considering the accuracies of [57.831%](http://www.sciencedirect.com/science/article/pii/S0925231203003722) and [61.7328%](https://www.researchgate.net/profile/Kumkum_Garg2/publication/238747905_A_Hybrid_Machine_Learning_System_for_Stock_Market_Forecasting/links/00b7d53b4cfc215d81000000/A-Hybrid-Machine-Learning-System-for-Stock-Market-Forecasting.pdf) obtained in the literature using SVMs for this problem - and there is a considerable amplitude of accuracy for the datasets - where the maximum difference is of 7.1% -, all of which **supports the hypotesis H1**. 
 
 | Code  | Avg Accuracy (%) | Variance |
 |:-----:|:----------------:|:--------:|
-| BBCD4 | 57.4             | 0.57     |
-| ABEV3 | 60.1             | 0.88     |
-| CMIG4 | 61.6             | 0.69     |
+| BBCD4 | **57.4**         | 0.57     |
+| ABEV3 | **60.1**         | 0.88     |
+| CMIG4 | **61.6**         | 0.69     |
 | VALE5 | 55.6             | 0.13     |
 | BRFS3 | 54.2             | 0.32     |
-| JBSS3 | 59.3             | 0.45     |
+| JBSS3 | **59.3**         | 0.45     |
 | BRKM5 | 56.9             | 0.43     |
 | PETR4 | 55.7             | 0.13     |
 | BBAS3 | 56.1             | 0.15     |
 | NATU3 | 54.0             | 0.09     |
-| CCRO3 | 59.3             | 0.68     |
+| CCRO3 | **59.3**         | 0.68     |
+
+As for hypotesis H2, it was verified that the selection of financial technical indicators based on its correlation changed for each stock. However, the accuracy results for all stock's 3 datasets were the same and thus **H2 could not be validated**. Since the weights in a SVM are composed by the formula below, it is possible that the variables *c(i)* for the technical indicators are zero and, therefore, H2 must be tested for **another machine learning algorithm**.
+
+![SVM weights](https://wikimedia.org/api/rest_v1/media/math/render/svg/cf0866d87cbe878e13e6a06560af15b9a9cc6bb0)
+
+## Future Work
+
+* Improve the classification accuracy by investigating the optimal SVM parameters;
+* H2 validation: replication of this study for other machine learning algorithms;
+* Investigate the possible reasons/forces which cause differences in stocks classification accuracy;
+* Predict the value profit in buying/selling stocks instead of predict ups and downs.
