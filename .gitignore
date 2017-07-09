@@ -1,4 +1,5 @@
 bovespa-data
+test
 *.swp
 *.pyc
 *.ropeproject

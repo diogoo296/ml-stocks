@@ -6,4 +6,4 @@ import pandas as pd
 
 data = pd.read_csv(sys.argv[1], dtype=np.float64)
 data.Class = data.Class.shift(-1)
-data[:-1].to_csv('VALE5.shifted.csv', index=False)
+data[:-1].to_csv(sys.argv[2], index=False)
