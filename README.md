@@ -17,7 +17,7 @@ Considering that there are several forces that moves stocks prices such as compa
 
 ## Dataset
 
-> The data was provided by a third party and I have asked permission to publish a limited subset of it but, unfortunately, I had no response yet.
+> The data was provided by a third party and I have asked permission to publish a limited subset of it but, unfortunately, I have had no response yet.
 
 The original dataset is composed by 60 stocks from [BM&F BOVESPA](https://en.wikipedia.org/wiki/BM%26F_Bovespa), the Brazilian official stock exchange and the 13th largest in the world (in 2011). The data was crawled in a 15 minutes interval between BOVESPA's opening and closing times from January 2008 to March 2017, where each stock is represented by around 70000 entries. The following image illustrates 4 stocks from this dataset:
 
